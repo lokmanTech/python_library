@@ -45,7 +45,7 @@ print(solution.sum(num1, num2)) #Output: -6
 ```        
 
 
-Run the solution [add_two_integers.py](python3/add_two_integers.py)
+Run the solution [add_two_integers.py](python3/add_two_Integers.py)
 
 ### <a id='1480'>1480. Running Sum of 1d Array</a>
 ------------[Back to the TOP ↑](#top)--------------
