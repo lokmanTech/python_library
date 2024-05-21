@@ -27,6 +27,10 @@ Constraints:
 
 -100 <= num1, num2 <= 100
 
+
+
+Run the solution [add_two_integers.py](python3/add_two_integers.py)
+
 ### <a id='1480'>1480. Running Sum of 1d Array</a>
 ------------[Back to the TOP ↑](#top)--------------
 
