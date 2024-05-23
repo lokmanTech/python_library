@@ -5,6 +5,7 @@ LeetCode problem solutions via **python3** with detailed explanations and optimi
 |:---------------:|
 |[Add Two Integers](#2235)|
 |[Running Sum of 1d Array](#1480)|
+|[Richest Customer Wealth]()|
 
 ### <a id='2235'>2235. Add Two Integers</a>
 ------------[Back to the TOP ↑](#top)--------------
@@ -104,5 +105,69 @@ nums3 = [3, 1, 2, 10, 1]
 print(solution.runningSum(nums3)) #Output: [3, 1, 2, 10, 1]
 ```
 
+Run the solution [Running Sum of 1d Array.py](python3/running_sum_of_1d_array.py)
 
+### <a id='1672'>1672. Richest Customer Wealth</a>
+------------[Back to the TOP ↑](#top)--------------
 
+You are given an m x n integer grid accounts where accounts[i][j] is the amount of money the i​​​​​​​​​​​th​​​​ customer has in the j​​​​​​​​​​​th​​​​ bank. Return the wealth that the richest customer has.
+
+A customer's wealth is the amount of money they have in all their bank accounts. The richest customer is the customer that has the maximum wealth.
+
+Example 1:
+
+Input: accounts = [[1,2,3],[3,2,1]]
+Output: 6
+Explanation:
+1st customer has wealth = 1 + 2 + 3 = 6
+2nd customer has wealth = 3 + 2 + 1 = 6
+Both customers are considered the richest with a wealth of 6 each, so return 6.
+Example 2:
+
+Input: accounts = [[1,5],[7,3],[3,5]]
+Output: 10
+Explanation: 
+1st customer has wealth = 6
+2nd customer has wealth = 10 
+3rd customer has wealth = 8
+The 2nd customer is the richest with a wealth of 10.
+Example 3:
+
+Input: accounts = [[2,8,7],[7,1,3],[1,9,5]]
+Output: 17
+ 
+
+Constraints:
+
+m == accounts.length
+n == accounts[i].length
+1 <= m, n <= 50
+1 <= accounts[i][j] <= 100
+
+```python3
+from typing import List
+
+class Solution:
+    def maximumWealth(self, accounts: List[List[int]]) -> int:
+        max_wealth = 0 # Initialize the maximum wealth to zero
+        
+        for customer_accounts in accounts:
+            current_wealth = sum(customer_accounts) # Calculate the wealth of the current customer
+            if current_wealth > max_wealth:
+                max_wealth = current_wealth # Update max_wealth if current_wealth is greater
+                
+        return max_wealth # Return the maximum wealth found
+    
+# Example usage
+solution = Solution()
+
+accounts1 = [[1,2,3],[3,2,1]]
+print(solution.maximumWealth(accounts1)) # Output 6
+
+accounts2 = [[1,5],[7,3],[3,5]]
+print(solution.maximumWealth(accounts2)) # Output 10
+
+accounts3 = [[2,8,7],[7,1,3],[1,9,5]]
+print(solution.maximumWealth(accounts3)) # Output 17
+```
+Run the solution [Richest Customer Wealth.py](python3/richest_customer_wealth.py)
