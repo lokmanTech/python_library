@@ -5,7 +5,7 @@ LeetCode problem solutions via **python3** with detailed explanations and optimi
 |:---------------:|
 |[Add Two Integers](#2235)|
 |[Running Sum of 1d Array](#1480)|
-|[Richest Customer Wealth]()|
+|[Richest Customer Wealth](#1672)|
 
 ### <a id='2235'>2235. Add Two Integers</a>
 ------------[Back to the TOP ↑](#top)--------------
